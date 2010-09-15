@@ -61,12 +61,24 @@ abstract class CDbMigrationAdapter {
      *  With the execute function, you can execute a raw SQL query against the
      *  database. The SQL query should be one that doesn't return any data.
      *
-     *  @param $query The SQL query to execute.
+     *  @param $query The SQL query to execute. It should either be a string or
+     *  an array with keys being engine names ('mysql', 'sqlite', etc), and values
+     *  being actial SQL queries (database-specific query).
      *  @param $params The parameters to pass to the SQL query.
      *
      *  @returns The number of affected rows.
      */
     public function execute($query, $params=array()) {
+        if (is_array($query)) {
+            $driverName = $this->db->driverName;
+            if (isset($query[$driverName])) {
+                $query = $query[$driverName];
+            } else {
+                throw new CDbMigrationException(
+                    "No query is specified for database engine $driverName in database-specific query."
+                );
+            }
+        }
         $cmd = $this->db->createCommand($query);
         foreach ($params as $key => $param) {
             $cmd->bindValue($key, $param);
@@ -78,12 +90,24 @@ abstract class CDbMigrationAdapter {
      *  With the query function, you can execute a raw SQL query against the
      *  database. The SQL query should be one that returns data.
      *
-     *  @param $query The SQL query to execute.
+     *  @param $query The SQL query to execute. It should either be a string or
+     *  an array with keys being engine names ('mysql', 'sqlite', etc), and values
+     *  being actial SQL queries (database-specific query).
      *  @param $params The parameters to pass to the SQL query.
      *
      *  @returns The rows returned from the database.
      */
     public function query($query, $params=array()) {
+        if (is_array($query)) {
+            $driverName = $this->db->driverName;
+            if (isset($query[$driverName])) {
+                $query = $query[$driverName];
+            } else {
+                throw new CDbMigrationException(
+                    "No query is specified for database engine $driverName in database-specific query."
+                );
+            }
+        }
         $cmd = $this->db->createCommand($query);
         foreach ($params as $key => $param) {
             $cmd->bindParam($key, $param);
