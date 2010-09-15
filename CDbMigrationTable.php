@@ -60,7 +60,7 @@ class CDbMigrationTable {
     /**
      *  Add a string field to the table.
      *
-     *  @param $name    The name of the primary key column.
+     *  @param $name    The name of the column.
      *  @param $options The extra options to pass to the column.
      */
     public function string($name, $size=null, $options=null) {
@@ -77,7 +77,7 @@ class CDbMigrationTable {
     /**
      *  Add a text field to the table.
      *
-     *  @param $name    The name of the primary key column.
+     *  @param $name    The name of the column.
      *  @param $options The extra options to pass to the column.
      */
     public function text($name, $options=null) {
@@ -87,7 +87,7 @@ class CDbMigrationTable {
     /**
      *  Add an integer field to the table.
      *
-     *  @param $name    The name of the primary key column.
+     *  @param $name    The name of the column.
      *  @param $options The extra options to pass to the column.
      */
     public function integer($name, $options=null) {
@@ -97,7 +97,7 @@ class CDbMigrationTable {
     /**
      *  Add a float field to the table.
      *
-     *  @param $name    The name of the primary key column.
+     *  @param $name    The name of the column.
      *  @param $options The extra options to pass to the column.
      */
     public function float($name, $options=null) {
@@ -107,7 +107,7 @@ class CDbMigrationTable {
     /**
      *  Add a decimal field to the table.
      *
-     *  @param $name    The name of the primary key column.
+     *  @param $name    The name of the column.
      *  @param $options The extra options to pass to the column.
      */
     public function decimal($name, $options=null) {
@@ -117,7 +117,7 @@ class CDbMigrationTable {
     /**
      *  Add a datetime field to the table.
      *
-     *  @param $name    The name of the primary key column.
+     *  @param $name    The name of the column.
      *  @param $options The extra options to pass to the column.
      */
     public function datetime($name, $options=null) {
@@ -127,7 +127,7 @@ class CDbMigrationTable {
     /**
      *  Add a timestamp field to the table.
      *
-     *  @param $name    The name of the primary key column.
+     *  @param $name    The name of the column.
      *  @param $options The extra options to pass to the column.
      */
     public function timestamp($name, $options=null) {
@@ -137,7 +137,7 @@ class CDbMigrationTable {
     /**
      *  Add a time field to the table.
      *
-     *  @param $name    The name of the primary key column.
+     *  @param $name    The name of the column.
      *  @param $options The extra options to pass to the column.
      */
     public function time($name, $options=null) {
@@ -147,7 +147,7 @@ class CDbMigrationTable {
     /**
      *  Add a date field to the table.
      *
-     *  @param $name    The name of the primary key column.
+     *  @param $name    The name of the column.
      *  @param $options The extra options to pass to the column.
      */
     public function date($name, $options=null) {
@@ -157,7 +157,7 @@ class CDbMigrationTable {
     /**
      *  Add a binary field to the table.
      *
-     *  @param $name    The name of the primary key column.
+     *  @param $name    The name of the column.
      *  @param $options The extra options to pass to the column.
      */
     public function binary($name, $options=null) {
@@ -167,7 +167,7 @@ class CDbMigrationTable {
     /**
      *  Add a boolean field to the table.
      *
-     *  @param $name    The name of the primary key column.
+     *  @param $name    The name of the column.
      *  @param $options The extra options to pass to the column.
      */
     public function boolean($name, $options=null) {
@@ -177,7 +177,7 @@ class CDbMigrationTable {
     /**
      *  Add a boolean field to the table.
      *
-     *  @param $name    The name of the primary key column.
+     *  @param $name    The name of the column.
      *  @param $options The extra options to pass to the column.
      */
     public function bool($name, $options=null) {

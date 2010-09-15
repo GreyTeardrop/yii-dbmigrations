@@ -75,7 +75,7 @@ abstract class CDbMigrationAdapter {
     }
     
     /**
-     *  With the execute function, you can execute a raw SQL query against the
+     *  With the query function, you can execute a raw SQL query against the
      *  database. The SQL query should be one that returns data.
      *
      *  @param $query The SQL query to execute.

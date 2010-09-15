@@ -9,7 +9,7 @@
  */
 
 /**
- *  The SQLite specific version of the database migration adapter.
+ *  The MySQL specific version of the database migration adapter.
  *
  *  @package extensions.yii-dbmigrations
  */
